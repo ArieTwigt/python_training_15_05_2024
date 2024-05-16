@@ -5,12 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Current File",
+            "name": "Debug: Spyker",
             "python": "${workspaceRoot}/venv/bin/python",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "args": ["--brand=spyker"]
+        },
+        {
+            "name": "Debug Audi",
+            "python": "${workspaceRoot}/venv/bin/python",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["--brand=audi"]
         }
     ]
 }
