@@ -1,6 +1,8 @@
-from utils import RDW_ENDPOINT
+#from utils import RDW_ENDPOINT
 import requests
 from typing import List, Dict
+
+RDW_ENDPOINT = "https://opendata.rdw.nl/resource/m9d7-ebf2.json"
 
 def import_car_brand(brand: str) -> List[Dict]:
     '''
@@ -26,5 +28,13 @@ def import_car_brand(brand: str) -> List[Dict]:
     return data
 
 
-def my_func(x, *args, **kwargs):
-    pass
+if __name__ == "__main__":
+    selected_brand = input("Insert brand:\n")
+
+    cars_list = import_car_brand(selected_brand)
+
+    print(cars_list)
+
+
+
+pass
